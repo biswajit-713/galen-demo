@@ -1,12 +1,8 @@
 Galen Sample Tests
 =====================================
+This project is a demo on usage of Galen Framework. The framework is used to test the responsiveness of a website on different devices.  
 
-This project is used in order to demonstrate the features of [Galen Framework](http://galenframework.com) and the power of Javascript-based tests
+Please use the following command to run the demo tests.
 
-The web application that it is testing is [http://testapp.galenframework.com/](http://testapp.galenframework.com/)
-
-If you have Galen Framework installed you can just checkout this project and run it with the following command:
-
-```
-galen test tests/ --htmlreport reports
-```
+windows - galen test tests\ --htmlreport reports\
+mac/ linux - galen test tests/ --htmlreport reports/
