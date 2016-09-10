@@ -5,4 +5,5 @@ This project is a demo on usage of Galen Framework. The framework is used to tes
 Please use the following command to run the demo tests.
 
 windows - galen test tests\ --htmlreport reports\
+
 mac/ linux - galen test tests/ --htmlreport reports/
