@@ -1,0 +1,43 @@
+@import rules/galen_rules.gspec
+
+@objects
+	content				css		div#content
+	my_notes			css		div#my-notes-page
+	my_notes_caption	css		div#my-notes-page>h2
+	notes_group			css		div.list-group
+	notes_items-*		css		a.list-group-item
+	add_notes_button	css		button.btn-primary
+	menu-*				css		div#menu ul>li
+	
+@groups
+	my_notes_elements			my_notes_caption,notes_group
+	my_notes_page_elements		&my_notes_elements,add_notes_button
+	menu_items					menu-* 
+
+@set
+	header_text			My Notes
+
+@set
+	top_margin					20 to 30px
+	side_margin					10 to 20px
+	no_margin					~ 0px
+
+= Menu =
+	| &menu_items are horizontally aligned next to each other with ${no_margin} margin
+	| &menu_items have same height and width
+
+= My Notes =
+	
+	| &my_notes_elements are vertically aligned above each other with ${side_margin} margin
+	| notes_items-* are vertically aligned above each other with ${no_margin} margin
+	
+	my_notes:
+		| located inside content with top margin of ${top_margin}
+	
+	my_notes_caption:
+		text is "${header_text}"
+		
+	add_notes_button:
+		| should be a primary button
+		| located below notes_group
+		

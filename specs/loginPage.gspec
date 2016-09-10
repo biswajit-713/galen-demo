@@ -1,0 +1,57 @@
+@import rules/galen_rules.gspec
+
+@objects
+	content				css		div#content
+	login_box			css		div#login-page
+	login_caption			css		div#login-page>h2
+	username_textfield	css		input[name='login.username']
+	password_textfield	css		input[name='login.password']
+	login_button		css		button.button-login
+	cancel_button		css		button.button-cancel
+
+@groups
+	login_box_text_elements									username_textfield, password_textfield
+	login_box_button_elements								login_button, cancel_button							
+	login_box_elements										login_caption, &login_box_text_elements, &login_box_button_elements
+	login_form_elements										login_caption, &login_box_text_elements
+
+@set
+	top_margin							20 to 30px
+    login_box_elements_vertical_margin  5 to 20px
+    login_box_elements_side_margin      ~ 20px
+    login_box_desktop_width             358px
+    login_box_mobile_width				400px
+    login_caption_text                  Login
+    login_button_text                   Login
+    cancel_button_text                  Cancel
+    form_textfield_height				34px
+
+
+@on mobile
+    @set login_box_elements_side_margin 0px
+
+
+= Login Box =
+	login_box:
+		| located inside content with top margin of ${top_margin}
+	
+	| &login_box_text_elements have height ${form_textfield_height}
+	| &login_form_elements are vertically aligned above each other with ${login_box_elements_vertical_margin} margin
+	| &login_form_elements are inside login_box with left margin of ${login_box_elements_side_margin}
+	
+	@on desktop, tablet
+		| &login_box_text_elements have width ${login_box_desktop_width}
+	@on mobile
+		| &login_box_text_elements have width ${login_box_mobile_width}
+
+
+	login_caption:
+		text is "${login_caption_text}"
+	login_button:
+		text is "${login_button_text}"
+		| should be a primary button
+		| located left of cancel_button
+	cancel_button:
+		text is "${cancel_button_text}"
+		| should be a secondary button
+	

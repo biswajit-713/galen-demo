@@ -1,0 +1,313 @@
+{
+  "testId" : "2-my-notes-page-on-desktop-device",
+  "name" : "My Notes page on desktop device",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Open http://testapp.galenframework.com/",
+      "status" : "info",
+      "time" : 1473518798161,
+      "type" : "node"
+    }, {
+      "name" : "Click loginButton on Welcome Page",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "css: div#welcome-page button.button-login",
+        "type" : "text"
+      } ],
+      "time" : 1473518798355,
+      "type" : "node"
+    }, {
+      "name" : "Log in as testuser@example.com with password test123",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "Type \"testuser@example.com\" to username on Login page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: input[name='login.username']",
+          "type" : "text"
+        } ],
+        "time" : 1473518798498,
+        "type" : "node"
+      }, {
+        "name" : "Type \"test123\" to password on Login page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: input[name='login.password']",
+          "type" : "text"
+        } ],
+        "time" : 1473518798567,
+        "type" : "node"
+      }, {
+        "name" : "Click loginButton on Login page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: button.button-login",
+          "type" : "text"
+        } ],
+        "time" : 1473518798612,
+        "type" : "node"
+      } ],
+      "time" : 1473518798497,
+      "type" : "node"
+    }, {
+      "name" : "Check layout: specs/myNotesPage.gspec included tags: desktop",
+      "status" : "error",
+      "time" : 1473518799869,
+      "includedTags" : [ "desktop" ],
+      "sections" : [ {
+        "name" : "Menu",
+        "objects" : [ ],
+        "sections" : [ {
+          "name" : "&menu_items are horizontally aligned next to each other with ~ 0px margin",
+          "objects" : [ {
+            "name" : "menu-1",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 91
+              },
+              "name" : "aligned horizontally all menu-2",
+              "highlight" : [ "menu-1", "menu-2" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 92
+              },
+              "name" : "left-of menu-2 ~ 0px",
+              "highlight" : [ "menu-1", "menu-2" ]
+            } ]
+          }, {
+            "name" : "menu-2",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 91
+              },
+              "name" : "aligned horizontally all menu-3",
+              "highlight" : [ "menu-2", "menu-3" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 92
+              },
+              "name" : "left-of menu-3 ~ 0px",
+              "highlight" : [ "menu-2", "menu-3" ]
+            } ]
+          }, {
+            "name" : "menu-3",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 91
+              },
+              "name" : "aligned horizontally all menu-4",
+              "highlight" : [ "menu-3", "menu-4" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 92
+              },
+              "name" : "left-of menu-4 ~ 0px",
+              "highlight" : [ "menu-3", "menu-4" ]
+            } ]
+          } ]
+        }, {
+          "name" : "&menu_items have same height and width",
+          "objects" : [ {
+            "name" : "menu-1",
+            "specs" : [ {
+              "status" : "error",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 102
+              },
+              "name" : "width 100 % of menu-2/width",
+              "errors" : [ "\"menu-1\" width is 89% [100px] instead of 100% [112px]" ],
+              "highlight" : [ "menu-1" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 103
+              },
+              "name" : "height 100 % of menu-2/height",
+              "highlight" : [ "menu-1" ]
+            } ]
+          }, {
+            "name" : "menu-2",
+            "specs" : [ {
+              "status" : "error",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 102
+              },
+              "name" : "width 100 % of menu-3/width",
+              "errors" : [ "\"menu-2\" width is 112% [112px] instead of 100% [100px]" ],
+              "highlight" : [ "menu-2" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 103
+              },
+              "name" : "height 100 % of menu-3/height",
+              "highlight" : [ "menu-2" ]
+            } ]
+          }, {
+            "name" : "menu-3",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 102
+              },
+              "name" : "width 100 % of menu-4/width",
+              "highlight" : [ "menu-3" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 103
+              },
+              "name" : "height 100 % of menu-4/height",
+              "highlight" : [ "menu-3" ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "name" : "My Notes",
+        "objects" : [ {
+          "name" : "my_notes",
+          "specs" : [ ],
+          "specGroups" : [ {
+            "name" : "located inside content with top margin of 20 to 30px",
+            "specs" : [ ]
+          } ]
+        }, {
+          "name" : "my_notes_caption",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/myNotesPage.gspec",
+              "lineNumber" : 38
+            },
+            "name" : "text is \"My Notes\"",
+            "highlight" : [ "my_notes_caption" ]
+          } ]
+        }, {
+          "name" : "add_notes_button",
+          "specs" : [ ],
+          "specGroups" : [ {
+            "name" : "should be a primary button",
+            "specs" : [ {
+              "status" : "info",
+              "name" : "color-scheme > 70% #2d6ca2",
+              "highlight" : [ "add_notes_button" ]
+            } ]
+          }, {
+            "name" : "located below notes_group",
+            "specs" : [ {
+              "status" : "info",
+              "name" : "below notes_group",
+              "highlight" : [ "add_notes_button", "notes_group" ]
+            } ]
+          } ]
+        } ],
+        "sections" : [ {
+          "name" : "&my_notes_elements are vertically aligned above each other with 10 to 20px margin",
+          "objects" : [ {
+            "name" : "my_notes_caption",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 58
+              },
+              "name" : "aligned vertically all notes_group",
+              "highlight" : [ "my_notes_caption", "notes_group" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 59
+              },
+              "name" : "above notes_group 10 to 20px",
+              "highlight" : [ "my_notes_caption", "notes_group" ]
+            } ]
+          } ]
+        }, {
+          "name" : "notes_items-* are vertically aligned above each other with ~ 0px margin",
+          "objects" : [ {
+            "name" : "notes_items-1",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 58
+              },
+              "name" : "aligned vertically all notes_items-2",
+              "highlight" : [ "notes_items-1", "notes_items-2" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/rules/galen_rules.gspec",
+                "lineNumber" : 59
+              },
+              "name" : "above notes_items-2 ~ 0px",
+              "highlight" : [ "notes_items-1", "notes_items-2" ]
+            } ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "menu-1" : {
+          "area" : [ 55, 70, 100, 64 ]
+        },
+        "menu-4" : {
+          "area" : [ 367, 70, 100, 64 ]
+        },
+        "add_notes_button" : {
+          "area" : [ 75, 366, 108, 46 ]
+        },
+        "menu-3" : {
+          "area" : [ 267, 70, 100, 64 ]
+        },
+        "menu-2" : {
+          "area" : [ 155, 70, 112, 64 ]
+        },
+        "notes_items-1" : {
+          "area" : [ 75, 217, 860, 65 ]
+        },
+        "notes_items-2" : {
+          "area" : [ 75, 281, 860, 65 ]
+        },
+        "my_notes_caption" : {
+          "area" : [ 75, 174, 860, 33 ]
+        },
+        "notes_group" : {
+          "area" : [ 75, 217, 860, 129 ]
+        }
+      },
+      "screenshot" : "layout-2-screenshot.png",
+      "type" : "layout"
+    }, {
+      "name" : "Screenshot & Page source",
+      "status" : "info",
+      "attachments" : [ "file-3-screenshot.png", "file-4-page-source.txt" ],
+      "time" : 1473518799869,
+      "extras" : {
+        "Location" : {
+          "value" : "http://testapp.galenframework.com/",
+          "type" : "link"
+        }
+      },
+      "type" : "node"
+    } ]
+  }
+}
